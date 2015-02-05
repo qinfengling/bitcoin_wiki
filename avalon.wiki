@@ -1,0 +1,62 @@
+[[File:Logo-A.png | 200px | thumb | left | Avalon Project]]
+
+阿瓦隆项目的第一款产品也叫阿瓦隆。目前阿瓦隆专注于比特币ASIC交易处理机。阿瓦隆项目由张楠赓<ref>http://www.canaan-creative.com</ref> <ref>https://bitcointalk.org/index.php?action=profile;u=38132</ref> 和 Yifu Guo<ref>http://bitsyn.com</ref> <ref>https://bitcointalk.org/index.php?action=profile;u=68196</ref>发起。项目成立于2012下半年。最开始由 bitcointalk<ref>https://bitcointalk.org/</ref> 论坛<ref>https://bitcointalk.org/index.php?topic=110090.0</ref>的一个贴子开始。阿瓦隆项目目前已经设计出三款ASIC: A3256, A3255, A3233, 多款比特币交易处理机,其中包括[[阿瓦隆1]], [[阿瓦隆2]]等。 现在，阿瓦隆项目正忙于他们的第三代芯片机器：[[阿瓦隆3]]，采用了2U服务器机柜设计，40nm ASIC工艺, (7GHS/chip, 0.7Watt/G)。
+
+阿瓦隆项目成立一年后，Yifu Guo（Bitsyncom）<ref>http://bitsyn.com</ref>离开了该项目。 从2014年开始Canaan Creative公司<ref>http://www.canaan-creative.com</ref>（由张楠赓创建）完全接管了该项目，另外Ehash.com（网上商城-该商城支持比特币交易）也归属Canaan Creative。
+
+{| class="wikitable" cellspacing="0" cellpadding="0" width=100% style="border: 0px solid #eee; padding: 0px"
+! width=33% style="background:#FCC6FF;border-left:0px solid white;border-right:5px solid white;border-top:5px solid white;" | 用户 
+! width=33% style="background:#B3DDF4;border-left:5px solid white;border-right:5px solid white;border-top:5px solid white;" | 开发者 
+! width=33% style="background:#F5FC7F;border-left:5px solid white;border-right:0px solid white;border-top:5px solid white;" | 商务合作 
+|-
+|valign="TOP" style="background:#FEE9FF;border-left:0px solid white;border-right:5px solid white;border-bottom:5px solid white;" | 
+* [[阿瓦隆1]]， 使用 A3256， 66/110GHs 比特币交易处理器  
+* [[阿瓦隆2]]， 使用 A3255， 100/300GHs 比特币交易处理器 
+* [[阿瓦隆3]]， 使用 A3233， 105/290/800/GHs 比特币交易处理器
+* [[阿瓦隆4]]， 使用 A3222([http://downloads.canaan-creative.com/browser/hardware/A3222/datasheet/A3222Q56-140627-V01-EN.pdf datasheet]), 700W, 1THs 比特币交易处理器
+
+* [[阿瓦隆3.5]]， 使用 A3233， 增加一些新的功能
+* [[阿瓦隆 nano]]， 仅使用一个A3233的小型USB装置
+* [http://downloads.canaan-creative.com/ams AMS] 由阿瓦隆研发的基于网页的管理系统。能够管理规模在2万台阿瓦隆3-290的大型矿场。后面的链接是一个三维版本的AMS [http://downloads.canaan-creative.com/ams/3d here]。
+* [[Avalon mm tools]] 用于更新MM固件和进行芯片完整性测试的工具。
+
+|valign="TOP" style="background:#D4EDFB;border-left:5px solid white;border-right:5px solid white;border-bottom:5px solid white;" | 
+* [http://downloads.canaan-creative.com/ 固件下载]
+* [https://github.com/Canaan-Creative 源代码]
+* [http://lists.canaan-creative.com 邮件列表]
+* [http://goo.gl/2ll1C0 IRC频道]
+* [http://downloads.canaan-creative.com/irclogs/ IRC日志]
+* [http://bbs.canaan-creative.com 阿瓦隆中文论坛]
+* [http://www.btcfans.com/it618_scoremall-scoremall.html 阿瓦隆中文商城]
+
+|valign="TOP" style="background:#FCFFCD;border-left:5px solid white;border-right:0px solid white;border-bottom:5px solid white;" | 
+* [https://ehash.com Online shop: 官方商城]
+* [http://www.canaan-creative.com 公司主页]
+* 获取更多信息，请发送邮件至service@canaan-creative.com。
+
+|}
+
+= 购买 =
+==  中国大陆地区代理 ==
+ 深圳阿瓦龙电子有限公司
+ 淘宝：http://avalon8.taobao.com/
+ 联系人：陈先生
+ 电话：0755-36820585
+ 手机：13528785811
+ QQ：1816404459
+ 邮箱：1816404459@qq.com 
+
+==  大陆以外地区 ==
+ ELEN Technology Limited.,
+ Contact: Eric Chen
+ Email: eric_chen@elen-tech.com
+ Phone: +(852) 30691639
+ FAX: +(852)30071717
+ Address: Rm.,604,Treasure Center, 42 Hung To Road, Kwun Tong,  Kln. HongKong
+
+= References =
+<references/>
+
+[[zh-cn:阿瓦隆]]
+
+[[Category:Hardware]]
