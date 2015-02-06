@@ -1,0 +1,199 @@
+= ASIC靓图 = 
+[[File:A3233 ASIC.jpg | 300px]]
+
+
+= A3233 =
+* 数据手册： [http://downloads.canaan-creative.com/hardware/A3233/datasheet/A3233Q48-140313-V01-EN.pdf 点击下载]
+
+ 封装方式： QFN48-7X7， 0.5mm pitch
+ 核心工作电压： 0.75V
+ 芯片工作频率： 600MHz
+ 算力： 7.089GH/s
+
+= 阿瓦隆3单模组 =
+== 产品类别： 290 (50个A3233芯片) ==
+{| class="wikitable sortable" border="1"
+|-
+! 电压 (V / 10000)
+! 频率 (MHz)
+! 电流 (A)
+! 设备错误率
+! 墙上电压 
+! 算力
+|- valign="top"
+| 7000
+| 475
+| 20.77
+| 1%
+| 310
+| 280
+|- valign="top"
+| 7250
+| 500
+| 25.66
+| <0.2%
+| 342
+| 295
+|- valign="top"
+| 7500
+| 550
+| 30.36
+| <0.2%
+| 410
+| 325
+|}
+
+= 阿瓦隆3整机 =
+== 产品类别： 800 (150个A3233芯片) ==
+{| class="wikitable sortable" border="1"
+|-
+! 电压 (V / 10000)
+! 频率 (MHz)
+! 算力 (GHs)
+! 墙上功率 (W)
+! 工作模式
+|- valign="top"
+| 6625
+| 400
+| 710
+| 668
+| 节电模式
+|- valign="top"
+| 6625
+| 450
+| 800
+| 822
+| 正常模式
+|- valign="top"
+| 6750
+| 475
+| 840
+| 911
+| 超频模式 
+|- valign="top"
+| 7250
+| 500
+| 890
+| 1037
+| 冬季模式
+|- valign="top"
+| 7500
+| 550
+| 970
+| 1235
+| 超频测试模式 （存在风险，测试要注意） 
+|}
+
+= 阿瓦隆3 1.2T =
+== 产品类别：'''1.2T''' (4组 x 50个A3233芯片) ==
+{| class="wikitable sortable" border="1"
+|-
+! 电压 (V / 10000)
+! 频率 (MHz)
+! 墙上功率(风扇速度自动调整开启)
+! 墙上功率(风扇定速：100)
+|- valign="top"
+| 7000
+| 475
+| 1295~1309
+| 1312
+|- valign="top"
+| 7250
+| 500
+| 1454~1482
+| 1483
+|- valign="top"
+| 7500
+| 550
+| 1689~1743
+| 1747
+|}
+
+= 测试可用的USB集线器 =
+* 13口， [http://item.jd.com/511117.html UNITEK Y-2132 USB2.0]
+* 10口， [http://detail.tmall.com/item.htm?id=21920799320&spm=a1z09.5.0.0.EVLiL7&_u=bv04hvu36a4&mt= UNITEK Y-2110 USB2.0]
+* 10口， [http://detail.tmall.com/item.htm?id=21480127875&spm=a1z09.5.0.0.GAdYYG&_u=bv04hvu715b&mt= Orico P10-U2 USB2.0]
+
+= 开发部分 =
+== 调试接口 ==
+[[File:DEBUG.jpeg | 300px]]
+
+= BFGMiner用法 =
+
+阿瓦隆3模组通信采用串口方式，通常只需要一个普通的USB串口连接到工作主机即可。
+在开始工作之前，首先要确认一下串口设备号(在Linux下通常为/dev/ttyUSBxx)，之后通过以下方式运行BFGMiner：
+
+<code>bfgminer -S avalonmm:\\.\COM22 --set avalonmm:clock=450 --set avalonmm:voltage=0.6625 --set avalonmm:fan=80</code>
+
+= 控制器固件 =
+== 同时支持703n和树莓派的固件 ==
+'''[https://en.bitcoin.it/wiki/Avalon2#20140320 20140320]'''后发布的固件同时支持阿瓦隆2和阿瓦隆3。 请到这里下载：
+  https://en.bitcoin.it/wiki/Avalon2#Firmware
+
+= MM固件 =
+
+== [http://downloads.canaan-creative.com/software/avalon3/2014-08-08/ 2014-08-08] ==
+* 固件版本号： '''331408-a15cac80'''
+* 支持长的coinbase1
+* '''支持p2pool''' (阿瓦隆项目在香港建立一个p2pool服务器，域名：p2pool.ehash.com)
+* 发布的版本关掉调试信息 
+* 清理了一些位于gpio，LED和reset的无用代码
+* 更新MM协议 [https://github.com/Canaan-Creative/MM/blob/master/firmware/doc/protocol.md protocol.md]
+
+== [http://downloads.canaan-creative.com/software/avalon3/2014-06-06/ 2014-06-06] ==
+* 固件版本号： '''331406-35fef700'''
+* 支持按模组id点亮红色的LED灯
+
+== [http://downloads.canaan-creative.com/software/avalon3/2014-05-27/ 2014-05-27] ==
+* 固件版本号： '''331406-fe02da80'''
+* 增加点亮红色LED灯功能 
+* 当两个温度传感器采集的温度均超过90摄氏度，关闭芯片的工作电源
+* 在检测处理中清除旧的MM任务
+* 增加自检功能，通过红色的LED进行状态指示
+* 已知问题：连接在同一个USB串口下的所有模组，当启动任何一个时，其他模组的红色LED灯会闪烁
+
+== [http://downloads.canaan-creative.com/software/avalon3/2014-05-04/ 2014-05-04] ==
+* 固件版本号： '''331404-dbb0c7c0'''
+* 支持最新的ADP板
+* 修正了读取温度的一个小错误
+* 默认支持的模组数由3改为4
+
+== [http://downloads.canaan-creative.com/software/avalon3/2014-04-17/ 2014-04-17] ==
+* 固件版本号： '''331404-b191ace0'''
+* 增加芯片测试代码，上位机测试脚本：[https://raw.githubusercontent.com/BitSyncom/avalon-extras/master/scripts/avalon3-a3233-modular-test.py avalon3-a3233-modular-test.py]
+* 修复了PG寄存器的用法，以二进制表示。0x1F代表5个电源模块均正常
+
+== [http://downloads.canaan-creative.com/software/avalon3/2014-04-01/ 2014-04-01] ==
+* 固件版本号： '''331404-ed2bbc80'''
+* 温度超过90摄氏度，MM强制关闭所有芯片的电源
+* 阿瓦隆3 MM代码完全兼容阿瓦隆2
+* 请使用[http://downloads.canaan-creative.com/software/avalon2/2014-03-20/ 2014-03-20]后发布的固件, 固件将同时支持阿瓦隆2(A3255)和阿瓦隆3(A3233)。 '''请注意'''
+** 电压调整的区间不同
+** 电压区间： '''0.6v ~ 0.8v'''
+** 在阿瓦隆3中频率用Mhz表示而不是之前的MHs 
+** 频率区间： '''400MHz ~ 650Mhz''' (MHz * 11.81 = MHs)
+** 举例说明： 如果您在阿瓦隆3中设置的频率是400，那么意味着其理论算力为：400 * 11.81 = ~4.7GHs
+
+== [http://downloads.canaan-creative.com/software/avalon3/NEXT-TESTING/ NEXT-TESTING] ==
+* 注意： 仅用于测试用途
+
+= 设计文件 =
+设计一个矿工可以采用7或者10芯片。
+  7芯片方案： 算力高但功耗也高
+ 10芯片方案： 算力高省电，但是需要更多的A3233芯片
+
+* http://downloads.canaan-creative.com/hardware/A3233/avalon3/avalon3-design-files-latest.7z
+
+== 20140319 ==
+* 修复了一处电路印刷错误
+
+== 20140317 ==
+* 初始版本
+
+= Links =
+[http://www.dogiecoin.com/avalon-avalon3.html 阿瓦隆3部署教程]
+
+[[zh-cn:阿瓦隆3]]
+
+[[Category:Hardware]]
+
