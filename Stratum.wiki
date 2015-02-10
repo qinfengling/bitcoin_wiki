@@ -1,0 +1,10 @@
+Stratum作为支持瘦客户端模式的一种开源客户端服务器协议，目前已经应用在[[Electrum]]。该协议最初出现在2012年前夕<ref>[https://bitcointalk.org/?topic=55842 在BitcoinTalk上Stratum协议原稿]</ref>，目前协议尚未完成，提议作为[[BIP]]（比特币改进方案）列入标准化。
+
+==挖矿扩展==
+
+Main page: [[Stratum mining protocol]]
+
+除了应用于比特币钱包，该协议也用于挖矿扩展。
+
+==References==
+<references/>
